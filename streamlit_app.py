@@ -43,3 +43,8 @@ if ingredients_list:
         st.success('Your Smoothie is ordered! '+ name_on_order, icon="✅")
 
 # if ingredients_list is not null: then do everything below this line that is indented.
+
+# new section to display fruitvise nutrition information
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
